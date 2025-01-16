@@ -1,1 +1,1 @@
-export const index = "http://localhost:9000";
+export const index = "https://shabbaz-vendor1.onrender.com";
