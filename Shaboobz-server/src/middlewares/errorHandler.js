@@ -1,7 +1,7 @@
 // Not found Error handler
 
 export const notFoundErrorHandler = (req, res, next) =>{
-    const error = new Error(`Not Found - ${req.originalUrl}`);
+    const error = new Error(`Not Found - }`);
     res.status = 404;
     next(error);
 };
