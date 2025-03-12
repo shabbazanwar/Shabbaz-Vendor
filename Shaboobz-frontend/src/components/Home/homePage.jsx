@@ -4,7 +4,7 @@ import { FaSearch, FaHeart, FaShoppingCart, FaSyncAlt } from "react-icons/fa";
 const HomePage = () => {
   return (
     <div className="bg-gray-100 min-h-screen">
-      {/* Main Navbar */}
+      {/* Navbar */}
       <nav className="bg-white p-4 flex justify-between items-center shadow-md">
         <div className="flex-1">
           <h1 className="text-red-600 text-2xl font-bold">Shaboobz</h1>
@@ -22,36 +22,26 @@ const HomePage = () => {
 
       {/* Mini Navbar */}
       <nav className="bg-gray-200 p-3 flex justify-center space-x-6 shadow-sm">
-        <a href="#" className="text-gray-700 hover:text-red-600 font-medium">Home</a>
-        <a href="#" className="text-gray-700 hover:text-red-600 font-medium">Products</a>
-        <a href="#" className="text-gray-700 hover:text-red-600 font-medium">Shops</a>
-        <a href="#" className="text-gray-700 hover:text-red-600 font-medium">Campaigns</a>
-        <a href="#" className="text-gray-700 hover:text-red-600 font-medium">Contact</a>
-        <a href="#" className="text-gray-700 hover:text-red-600 font-medium">About</a>
+        {["Home", "Products", "Shops", "Campaigns", "Contact", "About"].map((item) => (
+          <a href="#" key={item} className="text-gray-700 hover:text-red-500 font-medium">
+            {item}
+          </a>
+        ))}
       </nav>
 
       <div className="flex">
         {/* Sidebar with Categories and More */}
         <aside className="w-1/4 p-4">
           <div className="bg-white p-4 shadow-md rounded-lg">
-            <h2 className="font-bold text-lg mb-4">Categories</h2>
             <div className="space-y-2">
-              <div className="p-2 border rounded cursor-pointer">Busy Mart</div>
-              <div className="p-2 border rounded cursor-pointer">Luxury Emporium</div>
-              <div className="p-2 border rounded cursor-pointer">Elite Boutique</div>
-              <div className="p-2 border rounded cursor-pointer">Tech & Trend</div>
-              <div className="p-2 border rounded cursor-pointer">Zhop</div>
-              <div className="p-2 border rounded cursor-pointer text-red-600 font-bold">View More Options</div>
+              <div className="p-2 border rounded cursor-pointer">Otties Foods</div>
+              <div className="p-2 border rounded cursor-pointer">Everything Bally</div>
+              <div className="p-2 border rounded cursor-pointer">47 Kicks</div>
+              <div className="p-2 border rounded cursor-pointer">Leather Life</div>
+              <div className="p-2 border rounded cursor-pointer">Neemarh Prints Shop</div>
+              <div className="p-2 border rounded cursor-pointer">Jergio Jerseys</div>
+              <div className="p-2 border rounded cursor-pointer text-red-600 font-bold">View All</div>
             </div>
-          </div>
-          <div className="bg-white p-4 shadow-md rounded-lg mt-4">
-            <h2 className="font-bold text-lg mb-2">More Options</h2>
-            <ul className="space-y-2">
-              <li className="p-2 border rounded cursor-pointer">New Arrivals</li>
-              <li className="p-2 border rounded cursor-pointer">Best Sellers</li>
-              <li className="p-2 border rounded cursor-pointer">Discount Offers</li>
-              <li className="p-2 border rounded cursor-pointer">Trending Now</li>
-            </ul>
           </div>
         </aside>
 
@@ -76,13 +66,51 @@ const HomePage = () => {
               <button className="mt-2 bg-blue-600 text-white px-4 py-2 rounded">View Collection</button>
             </div>
           </section>
+
+          {/* Top Categories Section */}
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold mb-2">Top Categories</h2>
+            <p className="text-gray-500 mb-4">Lorem Ipsum is simply dummy text of the printing industry.</p>
+            <div className="grid grid-cols-6 gap-4">
+              {["Mobile", "Glasses", "Caps", "Shoes", "Shirts", "Pants"].map((category, index) => (
+                <div key={index} className="bg-white shadow-md rounded-full p-4 flex flex-col items-center">
+                  <div className="w-16 h-16 bg-gray-300 rounded-full"></div>
+                  <p className="mt-2 text-center">{category}</p>
+                </div>
+              ))}
+            </div>
+            <button className="mt-4 bg-red-500 text-white px-6 py-2 rounded-full">View More</button>
+          </section>
+
+          {/* Best Selling Products */}
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold mb-2">Best Selling Products</h2>
+            <p className="text-gray-500 mb-4">Special products this month</p>
+            <div className="grid grid-cols-4 gap-4">
+              {["NBA Pants", "LV Sneakers", "Air Jordan", "Lakers T-Shirt"].map((product, index) => (
+                <div key={index} className="bg-white shadow-md rounded-lg p-4">
+                  <div className="w-full h-40 bg-gray-300 rounded"></div>
+                  <p className="mt-2 font-medium">{product}</p>
+                  <p className="text-gray-500 text-sm">$58.00</p>
+                </div>
+              ))}
+            </div>
+            <button className="mt-4 bg-red-500 text-white px-6 py-2 rounded-full">View More</button>
+          </section>
+
+          {/* Additional Promo Section */}
+          <section className="mt-8 bg-blue-100 p-8 rounded-lg flex">
+            <div className="flex-1">
+              <h2 className="text-2xl font-bold">UK Premier Store for Wrist Watches</h2>
+              <p className="text-gray-500 mt-2">
+                Our collection showcases an unparalleled selection of premium watches.
+              </p>
+              <button className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-full">View More</button>
+            </div>
+            <div className="w-1/3 bg-blue-300 rounded-lg"></div>
+          </section>
         </main>
       </div>
-
-      {/* Footer */}
-      <footer className="bg-white p-4 text-center text-gray-700 mt-4 shadow-md border rounded-sm">
-        <p>Free Shipping | 100% Customer Feedback | Secure System | Online Support</p>
-      </footer>
     </div>
   );
 }
