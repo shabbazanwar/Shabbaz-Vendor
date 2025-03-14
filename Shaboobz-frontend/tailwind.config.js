@@ -10,6 +10,12 @@ export default {
       Poppins: ["Poppins", "sans-serif"],
     },
     extend: {
+      colors: {
+        pinkLight: "#FFC8DD",  // Light Pink
+        purpleLight: "#CDB4DB", // Soft Purple
+        blueLight: "#BDE0FE",  // Light Blue
+        blueSoft: "#A2D2FF",   // Soft Blue
+      },
       screens: {
         "1000px": "1050px",
         "1100px": "1110px",
@@ -21,4 +27,3 @@ export default {
   },
   plugins: [],
 }
-
