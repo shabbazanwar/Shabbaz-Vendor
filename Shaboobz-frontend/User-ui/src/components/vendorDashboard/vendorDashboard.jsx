@@ -1,6 +1,4 @@
 import { useState } from "react";
-// import { Card, CardContent } from "@/components/ui/card";
-// import { Button } from "@/components/ui/button";
 import { LayoutDashboard, Package, Settings, ShoppingBag, Store, Menu, DollarSign, ClipboardList } from "lucide-react";
 
 const VendorDashboard = () => {

@@ -14,12 +14,19 @@ const Login = () => {
   const API_URL = import.meta.env.VITE_API_URL || "http://localhost:9000/api/user";
 
   useEffect(() => {
-    // Redirect user if already logged in
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-    if (storedUser && storedUser.role) {
-      navigate(getDashboardRoute(storedUser.role));
+    const storedUserData = localStorage.getItem("user");
+    if (storedUserData) {
+      try {
+        const storedUser = JSON.parse(storedUserData);
+        if (storedUser && storedUser.role) {
+          navigate(getDashboardRoute(storedUser.role));
+        }
+      } catch (error) {
+        console.error("Error parsing user data:", error);
+        localStorage.removeItem("user");
+      }
     }
-  }, []);
+  }, [navigate]);
 
   const getDashboardRoute = (role) => {
     switch (role) {
@@ -45,11 +52,10 @@ const Login = () => {
       );
 
       const userData = res.data;
+      console.log("User Data:", userData);
       localStorage.setItem("user", JSON.stringify(userData));
 
-      alert("✅ Login Successful!");
-      navigate(getDashboardRoute(userData.role));
-      window.location.reload();
+      navigate(getDashboardRoute(userData.role), { replace: true });
     } catch (err) {
       setError(err.response?.data?.message || "❌ Login failed. Please try again.");
     } finally {
@@ -61,22 +67,22 @@ const Login = () => {
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Login to your Account
+          Sign in to your account
         </h2>
       </div>
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit}>
-            {error && <p className="text-red-500">{error}</p>}
+            {error && <p className="text-red-500 text-sm text-center">{error}</p>}
 
             <div>
-              <label className="block text-sm font-medium text-gray-700">Email Address</label>
+              <label className="block text-sm font-medium text-gray-700">Email address</label>
               <input
                 type="email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="appearance-none block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
               />
             </div>
 
@@ -88,18 +94,18 @@ const Login = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="appearance-none block w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm"
                 />
                 {visible ? (
                   <AiOutlineEye
-                    className="absolute right-2 top-2 cursor-pointer"
-                    size={25}
+                    className="absolute right-2 top-2 text-gray-500 cursor-pointer"
+                    size={20}
                     onClick={() => setVisible(false)}
                   />
                 ) : (
                   <AiOutlineEyeInvisible
-                    className="absolute right-2 top-2 cursor-pointer"
-                    size={25}
+                    className="absolute right-2 top-2 text-gray-500 cursor-pointer"
+                    size={20}
                     onClick={() => setVisible(true)}
                   />
                 )}
@@ -109,16 +115,16 @@ const Login = () => {
             <div>
               <button
                 type="submit"
-                className="w-full h-[40px] text-white bg-blue-600 hover:bg-blue-700 rounded-md"
                 disabled={loading}
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
               >
-                {loading ? "Logging in..." : "Submit"}
+                {loading ? "Logging in..." : "Login"}
               </button>
             </div>
 
-            <div className="flex justify-between">
-              <h4>Don't have an account?</h4>
-              <Link to="/sign-up" className="text-blue-600 pl-2">Sign Up</Link>
+            <div className="flex justify-between items-center text-sm">
+              <span>Don't have an account?</span>
+              <Link to="/sign-up" className="text-purple-600 hover:underline">Create one</Link>
             </div>
           </form>
         </div>

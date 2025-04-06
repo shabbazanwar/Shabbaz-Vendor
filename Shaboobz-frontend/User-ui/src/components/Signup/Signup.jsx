@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import styles from "../../styles/styles";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -16,9 +15,16 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`${API_URL}/register`, { name, email, password });
+      const { data } = await axios.post(`${API_URL}/register`, { name, email, password });
+      
+      // Save user to localStorage
+      localStorage.setItem("user", JSON.stringify(data.user));
+
+      // Notify other components (Navbar) that user state has changed
+      window.dispatchEvent(new Event("storage"));
+
       alert("User registered successfully!");
-      navigate("/"); // Redirect to homepage
+      navigate("/");
     } catch (error) {
       alert(error.response?.data?.message || "Failed to register. Please try again.");
     }
@@ -90,7 +96,7 @@ const Signup = () => {
                 Submit
               </button>
             </div>
-            <div className={`${styles.normalFlex} w-full`}>
+            <div className="flex justify-center">
               <h4>Already have an account?</h4>
               <Link to="/login" className="text-blue-600 pl-2">Sign In</Link>
             </div>
