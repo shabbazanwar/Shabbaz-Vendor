@@ -11,7 +11,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:9000/api/user";
+  const API_URL = import.meta.env.VITE_API_URL || "https://shabbaz-vendor-server.onrender.com";
 
   useEffect(() => {
     const storedUserData = localStorage.getItem("user");

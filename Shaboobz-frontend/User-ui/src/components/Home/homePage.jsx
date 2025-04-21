@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../Navbar/navBar.jsx";
 import { Link  }from "react-router-dom";
 
+
 const HomePage = () => {
   const [hoveredCategory, setHoveredCategory] = useState(null);
 
@@ -45,31 +46,62 @@ const HomePage = () => {
     { name: "Otties Foods", 
       img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743320841/otties7_pue6b1.jpg",
     products: [
-      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374322/otties4_hzec3k.jpg", price: "$20" },
+      { id: "101", name: "Otties small pack", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374322/otties4_hzec3k.jpg", price: "2000" },
+      { id: "101", name: "Otties small pack", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374322/otties4_hzec3k.jpg", price: "2000" },
+      { id: "101", name: "Otties small pack", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374322/otties4_hzec3k.jpg", price: "2000" },
+      { id: "101", name: "Otties small pack", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374322/otties4_hzec3k.jpg", price: "2000" },
     ] },
     { name: "Everything Bally", 
       img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743359193/bally17_gg5la2.jpg",
     products: [
+       { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374335/bally11_cvgmra.jpg", price: "$20" },
+       { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374335/bally11_cvgmra.jpg", price: "$20" },
+       { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374335/bally11_cvgmra.jpg", price: "$20" },
+       { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374335/bally11_cvgmra.jpg", price: "$20" },
        { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374335/bally11_cvgmra.jpg", price: "$20" },
     ] },
     { name: "47 Shoe Hub", 
       img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743359031/47k1_icrcdn.jpg",
     products: [
       { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374361/47k2_igmyjs.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374361/47k2_igmyjs.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374361/47k2_igmyjs.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374361/47k2_igmyjs.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374361/47k2_igmyjs.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374361/47k2_igmyjs.jpg", price: "$20" },
     ] },
     { name: "Neemarh's Print Shop", 
       img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743323395/neemarh11_lg7piu.png",
     products: [
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374306/neemarh3_nd4shb.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374306/neemarh3_nd4shb.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374306/neemarh3_nd4shb.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374306/neemarh3_nd4shb.jpg", price: "$20" },
       { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374306/neemarh3_nd4shb.jpg", price: "$20" },
     ] },
     { name: "Jergio Collections", 
       img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743323402/jergio1_un4jy3.jpg",
     products: [
       { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374437/jergio8_mnrhdr.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374437/jergio8_mnrhdr.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374437/jergio8_mnrhdr.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374437/jergio8_mnrhdr.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374437/jergio8_mnrhdr.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374437/jergio8_mnrhdr.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374437/jergio8_mnrhdr.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374437/jergio8_mnrhdr.jpg", price: "$20" },
     ] },
     { name: "Leather Life", 
       img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743352396/leatherlife1_kcmajz.jpg",
     products: [
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374230/leatherlife8_whb3lq.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374230/leatherlife8_whb3lq.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374230/leatherlife8_whb3lq.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374230/leatherlife8_whb3lq.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374230/leatherlife8_whb3lq.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374230/leatherlife8_whb3lq.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374230/leatherlife8_whb3lq.jpg", price: "$20" },
+      { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374230/leatherlife8_whb3lq.jpg", price: "$20" },
       { id: "101", name: "Product A", img: "https://res.cloudinary.com/duw8lbca7/image/upload/v1743374230/leatherlife8_whb3lq.jpg", price: "$20" },
     ] },
 
@@ -219,7 +251,7 @@ const HomePage = () => {
           {/* Official Stores */}
           <section className="mt-8 bg-[#F4F1FA] p-6 rounded-lg">
           <h2 className="text-2xl font-bold mb-2">Official Stores</h2>
-      <p className="text-gray-600 mb-4">Official stores at Shaboobz</p>
+      <p className="text-gray-600 mb-4">Official stores at ShopSpire</p>
       <div className="grid grid-cols-3 gap-4 bg-[#D9D2E9] p-6 rounded-lg shadow-md">
         {officialStores.map((store) => (
           <Link
@@ -374,7 +406,68 @@ const HomePage = () => {
   </section>
         </main>
       </div>
+
+      <footer className="bg-gray-800 text-gray-300 py-12 px-6">
+  <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 text-sm">
+    
+    <div>
+      <h3 className="font-semibold mb-4">NEED HELP?</h3>
+      <ul className="space-y-2">
+        <li><a href="/chat" className="hover:underline">Chat with us</a></li>
+        <li><a href="/help" className="hover:underline">Help Center</a></li>
+        <li><a href="/contact" className="hover:underline">Contact Us</a></li>
+      </ul>
     </div>
+
+    <div>
+      <h3 className="font-semibold mb-4">USEFUL LINKS</h3>
+      <ul className="space-y-2">
+        <li><a href="/how-to-shop" className="hover:underline">How to shop on ShopSpire?</a></li>
+        <li><a href="/delivery" className="hover:underline">Delivery Info</a></li>
+        <li><a href="/returns" className="hover:underline">Returns & Refunds</a></li>
+        <li><a href="/vendors" className="hover:underline">Become a Vendor</a></li>
+        <li><a href="/pickup" className="hover:underline">Pickup Stations</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 className="font-semibold mb-4">ABOUT SHOPSPIRE</h3>
+      <ul className="space-y-2">
+        <li><a href="/about" className="hover:underline">About us</a></li>
+        <li><a href="/careers" className="hover:underline">Careers</a></li>
+        <li><a href="/terms" className="hover:underline">Terms & Conditions</a></li>
+        <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
+        <li><a href="/blog" className="hover:underline">Our Blog</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 className="font-semibold mb-4">MAKE MONEY WITH SHOPSPIRE</h3>
+      <ul className="space-y-2">
+        <li><a href="/sell" className="hover:underline">Sell on ShopSpire</a></li>
+        <li><a href="/vendor" className="hover:underline">Vendor Hub</a></li>
+        <li><a href="/affiliate" className="hover:underline">Affiliate Program</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 className="font-semibold mb-4">CONNECT WITH US</h3>
+      <div className="flex space-x-4 text-xl">
+        <a href="#" className="hover:text-white"><i className="fab fa-facebook"></i></a>
+        <a href="#" className="hover:text-white"><i className="fab fa-instagram"></i></a>
+        <a href="#" className="hover:text-white"><i className="fab fa-twitter"></i></a>
+        <a href="#" className="hover:text-white"><i className="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm">
+    <p>&copy; {new Date().getFullYear()} ShopSpire. All rights reserved.</p>
+  </div>
+</footer>
+    </div>
+
   );
 };
 

@@ -48,7 +48,7 @@ const App = () => {
               <Route path="/cart" element={<CartPage />} />
             </Routes>
         </CartProvider>
-        </AuthProvider>
+      </AuthProvider>
       </div>
     </>
   );

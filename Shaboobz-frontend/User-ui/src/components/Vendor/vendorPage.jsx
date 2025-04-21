@@ -24,7 +24,7 @@ const VendorsPage = () => {
   if (error) return <p className="text-center text-red-500">{error}</p>;
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
+    <div className="min-h-screen mt-48 bg-gray-100 p-8">
       <h1 className="text-3xl font-bold text-center text-purple-700">All Shops</h1>
       <p className="text-gray-600 text-center mb-6">
         Browse through our vendors and explore their products.

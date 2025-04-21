@@ -29,7 +29,7 @@ const VendorPreview = () => {
       </p>
 
       {/* Display Products */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-14 m-8">
         {vendor.products.map((product) => (
           <div
             key={product.id}

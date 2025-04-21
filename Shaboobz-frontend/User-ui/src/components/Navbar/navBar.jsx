@@ -55,7 +55,7 @@ const Navbar = () => {
       </nav>
 
       <nav className="px-6 py-4 flex justify-between items-center">
-        <Link to="/" className="text-purple-600 text-2xl font-bold">Shaboobz</Link>
+        <Link to="/" className="text-purple-600 text-2xl font-bold">ShopSpire</Link>
 
         <div className="hidden md:flex flex-1 justify-center">
           <div className="flex items-center border rounded-md overflow-hidden w-2/3">

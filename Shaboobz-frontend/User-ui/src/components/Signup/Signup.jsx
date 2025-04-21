@@ -10,7 +10,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [visible, setVisible] = useState(false);
 
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:9000/api/user";
+  const API_URL = import.meta.env.VITE_API_URL || "https://shabbaz-vendor-server.onrender.com";
 
   const handleSubmit = async (e) => {
     e.preventDefault();

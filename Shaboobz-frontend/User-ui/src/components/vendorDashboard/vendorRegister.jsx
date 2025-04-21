@@ -28,7 +28,7 @@ const VendorRegister = () => {
     const vendorData = { storeName, storeDescription, storeImage, email, password };
 
     try {
-      const response = await fetch("http://localhost:9000/api/vendor/", {
+      const response = await fetch("https://shabbaz-vendor-server.onrender.com/vendor/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(vendorData),
